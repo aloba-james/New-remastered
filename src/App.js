@@ -44,8 +44,7 @@ const App = () => {
           ) : (
             <Authentication />
           )
-       } />
-       
+       } />       
         <Route path='checkout' element={<Checkout />} />
       </Route>
     </Routes>
