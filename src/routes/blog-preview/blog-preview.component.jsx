@@ -20,9 +20,9 @@ const BlogPreview  = () => {
   
     useEffect(() => {
         const getBlogsMap = async () => {
-        const blogsArray = await getBlogsAndDocuments('blogs');
-        console.log(blogsArray);
-        dispatch(setBlogs(blogsArray));
+            const blogsArray = await getBlogsAndDocuments('blogs');
+            console.log(blogsArray);
+            dispatch(setBlogs(blogsArray));
         };
 
         getBlogsMap();

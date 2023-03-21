@@ -33,14 +33,15 @@ const Category = () => {
         (
           <CategoryContainer className='category-container'>
             {
-              products &&
-              products.map((product) => (
+              products && products.map(
+                (product) => (
                   <ProductCard key={product.id} product={product} category={category}/>
-              ))}
+                )
+              )
+            }
           </CategoryContainer>
         )
       }
-
      
     </Fragment>
   );

@@ -34,7 +34,6 @@ const CartDropdown = () => {
           ) : (
             <>
               <EmptyMessage>Your cart is empty</EmptyMessage>
-              <Link to='/shop'>Continue shopping</Link>
             </>
         )}
       </CartItems>
@@ -45,6 +44,9 @@ const CartDropdown = () => {
           <Button onClick={emptyCartHandler} style={{marginTop: 30}}>Empty cart</Button>
         </>
         ) : (<>
+            <Button onClick={() => {navigate('/shop')}} style={{marginTop: 30}}>
+              Continue Shopping
+            </Button>
         </>)
       }
     </CartDropdownContainer>

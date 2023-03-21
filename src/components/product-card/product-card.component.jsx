@@ -18,7 +18,7 @@ import { ProductCartContainer,
 import { faEye } from '@fortawesome/free-solid-svg-icons';
 
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, category }) => {
   const { name, price, imageUrl } = product;
   const dispatch = useDispatch();  
   const cartItems = useSelector(selectCartItems);
@@ -39,7 +39,7 @@ const ProductCard = ({ product }) => {
       </Button>
 
 
-      <Link to={`/${name}`} style={{top: 0, paddingTop: 15}}>
+      <Link to={`/shop/${category}/${name}`} style={{top: 0, paddingTop: 15}}>
           <FontAwesomeIcon icon={faEye} />
       </Link>      
       

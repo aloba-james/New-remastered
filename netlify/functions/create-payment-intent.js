@@ -8,21 +8,21 @@ exports.handler = async(event) => {
             {
                 amount,
                 currency: "usd",
-                payment_type: ["card"]
+                payment_method_types: ["card"]
             }
         );
 
         return {
             statusCode: 200,
-            body: JSON.stringigfy({paymentIntent})
+            body: JSON.stringify({paymentIntent})
         }
     }
     catch(error){
         console.log({error});
 
         return{
-            statusCode: 400,
+            status: 400,
             body: JSON.stringify({error})
         }
     }
-}
+};

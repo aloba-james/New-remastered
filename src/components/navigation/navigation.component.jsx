@@ -65,8 +65,8 @@ const Navigation = () => {
   const cartItems = useSelector(selectCartItems);
 
   const signOutHandler = () => {
-    signOutUser()
-    dispatch(emptyCart(cartItems))
+    signOutUser();
+    dispatch(emptyCart(cartItems));
   };
 
   const [colorChange, setColorchange] = useState(false);
